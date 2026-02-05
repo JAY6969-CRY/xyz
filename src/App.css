@@ -1,0 +1,6 @@
+/* Clean slate for custom Valentine's styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

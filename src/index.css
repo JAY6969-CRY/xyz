@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a1a1a;
+  background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utilities */
+.font-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 23, 68, 0.3);
+}
+
+/* Button styles using standard CSS instead of @apply */
+.button-base {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+}
+
+.button-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: linear-gradient(to right, #ec4899, #ef4444);
+  color: white;
+  border: none;
+}
+
+.button-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.button-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  border: 2px solid #f472b6;
+  color: #db2777;
+}
+
+.button-secondary:hover {
+  background: #fdf2f8;
+}
+
+/* Confetti animation */
+@keyframes confetti-fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: fixed;
+  animation: confetti-fall 3s ease-out forwards;
+  z-index: 50;
+}
+
+/* Heart float animation */
+@keyframes heart-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) translateX(var(--tx, 0)) scale(0.8);
+  }
+}
+
+.heart-float {
+  position: fixed;
+  animation: heart-float 2.5s ease-out forwards;
+  z-index: 40;
+  pointer-events: none;
+}
