@@ -36,7 +36,7 @@ export default function LandingScreen({ onContinue }: LandingScreenProps) {
 
         <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight">
           <TypewriterText
-            text="Hey… I have a very important question 👀"
+            text="oka question vundi vintava nana ?"
             delay={50}
           />
         </h1>
